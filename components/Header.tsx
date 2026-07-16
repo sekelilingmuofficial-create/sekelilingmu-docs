@@ -44,10 +44,8 @@ export default function Header({
         "
       >
         {/* LEFT */}
-
         <div className="flex items-center">
           {/* Mobile Menu */}
-
           <button
             onClick={onMenuClick}
             className="
@@ -63,7 +61,6 @@ export default function Header({
           </button>
 
           {/* Logo */}
-
           <Link
             href="/"
             className="
@@ -103,7 +100,6 @@ export default function Header({
           </Link>
 
           {/* Navigation */}
-
           <nav
             className="
               ml-32
@@ -164,11 +160,25 @@ export default function Header({
             >
               About
             </Link>
+
+            <a
+              href="https://ardiansyah-portfolio.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                text-sm
+                font-medium
+                text-zinc-300
+                transition
+                hover:text-green-400
+              "
+            >
+              Portfolio
+            </a>
           </nav>
         </div>
 
         {/* SEARCH */}
-
         <div
           className="
             ml-auto
@@ -181,9 +191,12 @@ export default function Header({
         </div>
 
         {/* RIGHT */}
-
         <div className="ml-4 flex items-center gap-2">
-          <button
+          {/* GitHub */}
+          <a
+            href="https://github.com/sekelilingmuofficial-create/sekelilingmu-docs"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
               rounded-xl
               border
@@ -199,8 +212,9 @@ export default function Header({
               size={18}
               className="text-zinc-300"
             />
-          </button>
+          </a>
 
+          {/* Notification */}
           <button
             className="
               rounded-xl
@@ -216,6 +230,7 @@ export default function Header({
             <Bell size={18} />
           </button>
 
+          {/* Dark Mode */}
           <button
             className="
               rounded-xl
@@ -231,6 +246,7 @@ export default function Header({
             <Moon size={18} />
           </button>
 
+          {/* Avatar */}
           <div
             className="
               ml-2
