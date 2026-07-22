@@ -12,41 +12,73 @@ import { FolderOpen } from "lucide-react";
 // ============================================================================
 // PROJECT LIST
 // ============================================================================
-// TODO: ganti `demoUrl` / `githubUrl` di bawah dengan link asli begitu sudah
-// online (misal setelah deploy ke GitHub Pages / Vercel / Play Store, dst).
-// ============================================================================
 
 const projects = [
   {
     title: "Ingatanku",
+
     description:
-      "Aplikasi pelacak keuangan pribadi — catat pemasukan & pengeluaran, atur budget per kategori, lihat laporan keuangan, dan dapatkan pengingat tagihan. Dibangun dengan Flutter (mobile) dan Laravel (backend API).",
-    tags: ["Flutter", "Laravel", "MySQL", "REST API"],
-    demoUrl: "#", // TODO: isi dengan URL landing page Ingatanku setelah online
-    githubUrl: "#", // TODO: isi dengan URL repo Ingatanku
-    status: "in-progress" as const,
-  },
-  {
-    title: "Sekelilingmu Docs",
-    description:
-      "Situs dokumentasi & portofolio ini sendiri — dibangun dengan Next.js App Router, Tailwind CSS, dan shadcn/ui.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    demoUrl: "https://sekelilingmu-docs.vercel.app",
+      "Aplikasi pelacak keuangan pribadi yang membantu pengguna mencatat pemasukan, pengeluaran, mengelola budget, melihat laporan keuangan, serta mendapatkan pengingat tagihan secara otomatis.",
+
+    tags: [
+      "Flutter",
+      "Laravel",
+      "MySQL",
+      "REST API",
+    ],
+
+    demoUrl:
+      "https://ingatanku-landing.vercel.app/",
+
     githubUrl:
-      "https://github.com/sekelilingmuofficial-create/sekelilingmu-docs",
+      "https://github.com/sekelilingmuofficial-create",
+
     status: "live" as const,
   },
+
   {
-    title: "Proyek Berikutnya",
+    title: "Sekelilingmu Docs",
+
     description:
-      "Lebih banyak proyek sedang disiapkan. Pantau terus halaman ini untuk update terbaru.",
-    tags: ["Coming Soon"],
+      "Developer Platform yang berisi dokumentasi Flutter, Laravel, Docker, Azure, Linux, Git & GitHub, serta showcase project dan roadmap pembelajaran teknologi.",
+
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+
+    demoUrl:
+      "https://sekelilingmu-docs.vercel.app",
+
+    githubUrl:
+      "https://github.com/sekelilingmuofficial-create/sekelilingmu-docs",
+
+    status: "live" as const,
+  },
+
+  {
+    title: "Developer Toolkit",
+
+    description:
+      "Developer Toolkit untuk membantu mengelola berbagai project Flutter, Laravel, React Native, Docker, Git dan Deployment dalam satu dashboard yang modern dan efisien.",
+
+    tags: [
+      "Windows",
+      "Flutter",
+      "Laravel",
+      "Git",
+      "Coming Soon",
+    ],
+
     status: "planned" as const,
   },
 ];
 
 export default function ProjectsPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] =
+    useState(false);
 
   return (
     <main
@@ -59,6 +91,7 @@ export default function ProjectsPage() {
       "
     >
       {/* Background Grid */}
+
       <div className="absolute inset-0 -z-10 opacity-20">
         <div
           className="
@@ -72,6 +105,7 @@ export default function ProjectsPage() {
       </div>
 
       {/* Glow Effect */}
+
       <div
         className="
           absolute
@@ -88,14 +122,28 @@ export default function ProjectsPage() {
       />
 
       {/* Header */}
-      <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
+
+      <Header
+        onMenuClick={() =>
+          setSidebarOpen(!sidebarOpen)
+        }
+      />
 
       {/* Sidebar */}
-      <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+      <Sidebar
+        open={sidebarOpen}
+        onClose={() =>
+          setSidebarOpen(false)
+        }
+      />
 
       {/* Main Content */}
+
       <div className="lg:ml-72">
-        {/* Page Heading */}
+
+        {/* Heading */}
+
         <section className="mx-auto max-w-7xl px-6 pb-10 pt-32 lg:px-8">
           <div
             className="
@@ -114,33 +162,78 @@ export default function ProjectsPage() {
               backdrop-blur
             "
           >
-            <FolderOpen size={16} className="text-green-400" />
+            <FolderOpen
+              size={16}
+              className="text-green-400"
+            />
+
             Projects
           </div>
 
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl">
-            Proyek yang sedang
-            <span className="block bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-              saya kerjakan
+          <h1
+            className="
+            text-4xl
+            font-bold
+            leading-tight
+            tracking-tight
+            text-white
+            sm:text-5xl
+            "
+          >
+            Showcase Project &
+            <span
+              className="
+              block
+              bg-gradient-to-r
+              from-green-400
+              to-blue-500
+              bg-clip-text
+              text-transparent
+              "
+            >
+              Developer Platform
             </span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-400">
-            Kumpulan aplikasi dan tools yang sedang dibangun — mulai dari
-            mobile app, backend API, sampai dokumentasi.
+          <p
+            className="
+            mt-6
+            max-w-3xl
+            text-lg
+            leading-relaxed
+            text-gray-400
+            "
+          >
+            Kumpulan aplikasi, tools,
+            dokumentasi dan platform yang
+            sedang dikembangkan mulai dari
+            Flutter, Laravel, Docker,
+            DevOps hingga Developer Toolkit.
           </p>
         </section>
 
-        {/* Project Grid */}
+        {/* Projects */}
+
         <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div
+            className="
+            grid
+            gap-6
+            sm:grid-cols-2
+            lg:grid-cols-3
+            "
+          >
             {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
+              <ProjectCard
+                key={project.title}
+                {...project}
+              />
             ))}
           </div>
         </section>
 
         {/* Footer */}
+
         <Footer />
       </div>
     </main>
