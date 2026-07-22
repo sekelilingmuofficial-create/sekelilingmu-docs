@@ -9,6 +9,9 @@ import {
   Info,
   ChevronRight,
   X,
+  Wrench,
+  Download,
+  Map,
 } from "lucide-react";
 
 import {
@@ -38,11 +41,13 @@ const menus = [
         href: "/",
         icon: <Home size={18} />,
       },
+
       {
         name: "Projects",
         href: "/projects",
         icon: <FolderOpen size={18} />,
       },
+
       {
         name: "About",
         href: "/about",
@@ -50,6 +55,7 @@ const menus = [
       },
     ],
   },
+
   {
     title: "Documentation",
     items: [
@@ -63,6 +69,7 @@ const menus = [
           />
         ),
       },
+
       {
         name: "Laravel",
         href: "/docs/laravel",
@@ -73,6 +80,7 @@ const menus = [
           />
         ),
       },
+
       {
         name: "Docker",
         href: "/docs/docker",
@@ -83,6 +91,7 @@ const menus = [
           />
         ),
       },
+
       {
         name: "Azure",
         href: "/docs/azure",
@@ -93,6 +102,7 @@ const menus = [
           />
         ),
       },
+
       {
         name: "Linux",
         href: "/docs/linux",
@@ -103,6 +113,7 @@ const menus = [
           />
         ),
       },
+
       {
         name: "Windows Server",
         href: "/docs/windows-server",
@@ -113,10 +124,36 @@ const menus = [
           />
         ),
       },
+
       {
         name: "Git & GitHub",
         href: "/docs/git-github",
-        icon: <SiGithub size={18} />,
+        icon: (
+          <SiGithub size={18} />
+        ),
+      },
+    ],
+  },
+
+  {
+    title: "Coming Soon",
+    items: [
+      {
+        name: "Developer Toolkit",
+        href: "/toolkit",
+        icon: <Wrench size={18} />,
+      },
+
+      {
+        name: "Downloads",
+        href: "/downloads",
+        icon: <Download size={18} />,
+      },
+
+      {
+        name: "Roadmap",
+        href: "/roadmap",
+        icon: <Map size={18} />,
       },
     ],
   },
@@ -131,46 +168,49 @@ export default function Sidebar({
   return (
     <>
       {/* Overlay Mobile */}
+
       {open && (
         <div
           className="
-            fixed
-            inset-0
-            z-40
-            bg-black/60
-            backdrop-blur-sm
-            lg:hidden
+          fixed
+          inset-0
+          z-40
+          bg-black/60
+          backdrop-blur-sm
+          lg:hidden
           "
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
+
       <aside
         className={`
-          fixed
-          left-0
-          top-20
-          z-50
-          h-[calc(100vh-80px)]
-          w-72
-          overflow-y-auto
-          border-r
-          border-white/10
-          bg-[#09090b]
-          transition-transform
-          duration-300
+        fixed
+        left-0
+        top-20
+        z-50
+        h-[calc(100vh-80px)]
+        w-72
+        overflow-y-auto
+        border-r
+        border-white/10
+        bg-[#09090b]
+        transition-transform
+        duration-300
 
-          ${
-            open
-              ? "translate-x-0"
-              : "-translate-x-full"
-          }
+        ${
+          open
+            ? "translate-x-0"
+            : "-translate-x-full"
+        }
 
-          lg:translate-x-0
+        lg:translate-x-0
         `}
       >
         {/* Mobile Header */}
+
         <div className="flex items-center justify-between p-6 lg:hidden">
           <h2 className="font-bold">
             Navigation
@@ -189,13 +229,13 @@ export default function Sidebar({
             >
               <p
                 className="
-                  mb-3
-                  px-3
-                  text-xs
-                  font-semibold
-                  uppercase
-                  tracking-[0.25em]
-                  text-zinc-500
+                mb-3
+                px-3
+                text-xs
+                font-semibold
+                uppercase
+                tracking-[0.25em]
+                text-zinc-500
                 "
               >
                 {section.title}
@@ -212,20 +252,21 @@ export default function Sidebar({
                       href={item.href}
                       onClick={onClose}
                       className={`
-                        group
-                        flex
-                        items-center
-                        justify-between
-                        rounded-xl
-                        px-3
-                        py-3
-                        transition-all
+                      group
+                      flex
+                      items-center
+                      justify-between
+                      rounded-xl
+                      px-3
+                      py-3
+                      transition-all
+                      duration-300
 
-                        ${
-                          active
-                            ? "border border-green-500/20 bg-green-500/10 text-green-400"
-                            : "text-zinc-400 hover:bg-white/5 hover:text-white"
-                        }
+                      ${
+                        active
+                          ? "border border-green-500/20 bg-green-500/10 text-green-400 shadow-lg shadow-green-500/10"
+                          : "text-zinc-400 hover:bg-white/5 hover:text-white"
+                      }
                       `}
                     >
                       <div className="flex items-center gap-3">
@@ -239,9 +280,9 @@ export default function Sidebar({
                       <ChevronRight
                         size={16}
                         className="
-                          opacity-0
-                          transition
-                          group-hover:opacity-100
+                        opacity-0
+                        transition
+                        group-hover:opacity-100
                         "
                       />
                     </Link>
@@ -252,27 +293,35 @@ export default function Sidebar({
           ))}
 
           {/* Bottom Card */}
+
           <div
             className="
-              mt-8
-              rounded-2xl
-              border
-              border-green-500/20
-              bg-gradient-to-br
-              from-green-500/10
-              to-transparent
-              p-5
+            mt-8
+            rounded-2xl
+            border
+            border-green-500/20
+            bg-gradient-to-br
+            from-green-500/10
+            to-transparent
+            p-5
             "
           >
             <p className="text-sm font-semibold text-green-400">
-              🚀 Sekelilingmu Docs
+              🚀 Sekelilingmu Developer Platform
             </p>
 
-            <p className="mt-3 text-sm leading-6 text-zinc-400">
-              Belajar Flutter, Laravel,
-              Docker, Azure, Linux,
-              Networking dan DevOps dalam
-              satu tempat.
+            <p
+              className="
+              mt-3
+              text-sm
+              leading-6
+              text-zinc-400
+              "
+            >
+              Documentation, Projects,
+              Flutter, Laravel, Docker,
+              Azure, Linux dan DevOps
+              dalam satu platform.
             </p>
           </div>
         </div>
