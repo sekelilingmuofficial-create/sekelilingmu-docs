@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
-
-import Link from "next/link";
 
 import {
   BookOpen,
@@ -15,6 +14,13 @@ import {
   FileText,
   FolderOpen,
   Layers,
+  Terminal,
+  Code2,
+  Database,
+  Server,
+  Cloud,
+  UploadCloud,
+  GraduationCap,
 } from "lucide-react";
 
 //==================================================
@@ -30,7 +36,6 @@ const docs = [
     projects: "5 Projects",
     href: "/docs/flutter",
   },
-
   {
     title: "Laravel",
     subtitle: "Backend Development",
@@ -39,7 +44,6 @@ const docs = [
     projects: "4 Projects",
     href: "/docs/laravel",
   },
-
   {
     title: "Docker",
     subtitle: "Containerization",
@@ -48,7 +52,6 @@ const docs = [
     projects: "3 Projects",
     href: "/docs/docker",
   },
-
   {
     title: "Azure",
     subtitle: "Cloud Computing",
@@ -57,7 +60,6 @@ const docs = [
     projects: "2 Projects",
     href: "/docs/azure",
   },
-
   {
     title: "Linux",
     subtitle: "Linux Administration",
@@ -66,7 +68,6 @@ const docs = [
     projects: "2 Projects",
     href: "/docs/linux",
   },
-
   {
     title: "Windows Server",
     subtitle: "Server Management",
@@ -75,7 +76,6 @@ const docs = [
     projects: "2 Projects",
     href: "/docs/windows-server",
   },
-
   {
     title: "Git & GitHub",
     subtitle: "Version Control",
@@ -95,22 +95,18 @@ const latestUpdates = [
     title: "Flutter Installation",
     date: "3 Days Ago",
   },
-
   {
     title: "Laravel REST API",
     date: "5 Days Ago",
   },
-
   {
     title: "Docker Deployment",
     date: "7 Days Ago",
   },
-
   {
     title: "Azure Virtual Machine",
     date: "10 Days Ago",
   },
-
   {
     title: "Linux Basic Command",
     date: "12 Days Ago",
@@ -164,6 +160,10 @@ const roadmap = [
   },
 ];
 
+//==================================================
+// DOCUMENTATION CATEGORIES
+//==================================================
+
 const categories = [
   {
     title: "Beginner",
@@ -196,34 +196,25 @@ const categories = [
 //==================================================
 
 export default function DocsPage() {
-  const [sidebarOpen, setSidebarOpen] =
-    useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <main
-      className="
-      relative
-      min-h-screen
-      overflow-hidden
-      bg-black
-      text-white
-      "
-    >
-      {/* Background Grid */}
+    <main className="relative min-h-screen overflow-hidden bg-black text-white">
+
+      {/* BACKGROUND GRID */}
 
       <div className="absolute inset-0 -z-10 opacity-20">
         <div
           className="
           h-full
           w-full
-          bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),
-          linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)]
+          bg-[linear-gradient(to_right,#1a1a1a_1px,transparent_1px),linear-gradient(to_bottom,#1a1a1a_1px,transparent_1px)]
           bg-[size:40px_40px]
           "
         />
       </div>
 
-      {/* Glow Effect */}
+      {/* GLOW EFFECT */}
 
       <div
         className="
@@ -240,30 +231,28 @@ export default function DocsPage() {
         "
       />
 
-      {/* Header */}
+      {/* HEADER */}
 
       <Header
-        onMenuClick={() =>
-          setSidebarOpen(!sidebarOpen)
-        }
+        onMenuClick={() => setSidebarOpen(!sidebarOpen)}
       />
 
-      {/* Sidebar */}
+      {/* SIDEBAR */}
 
       <Sidebar
         open={sidebarOpen}
-        onClose={() =>
-          setSidebarOpen(false)
-        }
+        onClose={() => setSidebarOpen(false)}
       />
 
-      {/* Content */}
+      {/* CONTENT */}
 
       <div className="lg:ml-72">
 
+        {/*==================================================*/}
         {/* HERO SECTION */}
+        {/*==================================================*/}
 
-        <section className="mx-auto max-w-7xl px-6 pt-32 pb-16 lg:px-8">
+        <section className="mx-auto max-w-7xl px-6 pb-16 pt-32 lg:px-8">
 
           <div
             className="
@@ -290,7 +279,6 @@ export default function DocsPage() {
             Documentation
           </div>
 
-
           <h1
             className="
             mt-8
@@ -304,7 +292,6 @@ export default function DocsPage() {
             DOCUMENTATION
           </h1>
 
-
           <p
             className="
             mt-4
@@ -314,16 +301,15 @@ export default function DocsPage() {
             text-gray-300
             "
           >
-            Learn •
+            Learn
             <span className="text-green-400">
-              {" "}Build{" "}
+              {" "}• Build{" "}
             </span>
             •
             <span className="text-blue-400">
               {" "}Deploy
             </span>
           </p>
-
 
           <p
             className="
@@ -336,17 +322,12 @@ export default function DocsPage() {
             text-gray-400
             "
           >
-            Documentation Platform untuk
-            Developer Indonesia yang
-            menyediakan pembelajaran
-            Flutter, Laravel, Docker,
-            Azure, Linux, Windows Server,
-            Git & GitHub serta berbagai
-            project dan deployment guide.
+            Documentation Platform untuk Developer Indonesia yang menyediakan
+            pembelajaran Flutter, Laravel, Docker, Azure, Linux, Windows
+            Server, Git & GitHub serta berbagai project dan deployment guide.
           </p>
 
-
-          {/* Statistics */}
+          {/* STATISTICS */}
 
           <div
             className="
@@ -359,7 +340,6 @@ export default function DocsPage() {
           >
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
-
               <FileText
                 className="mx-auto mb-4 text-green-400"
                 size={28}
@@ -372,12 +352,9 @@ export default function DocsPage() {
               <p className="mt-2 text-gray-400">
                 Articles
               </p>
-
             </div>
 
-
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
-
               <BookOpen
                 className="mx-auto mb-4 text-green-400"
                 size={28}
@@ -390,12 +367,9 @@ export default function DocsPage() {
               <p className="mt-2 text-gray-400">
                 Tutorials
               </p>
-
             </div>
 
-
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
-
               <FolderOpen
                 className="mx-auto mb-4 text-green-400"
                 size={28}
@@ -408,12 +382,9 @@ export default function DocsPage() {
               <p className="mt-2 text-gray-400">
                 Projects
               </p>
-
             </div>
 
-
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
-
               <Layers
                 className="mx-auto mb-4 text-green-400"
                 size={28}
@@ -426,16 +397,13 @@ export default function DocsPage() {
               <p className="mt-2 text-gray-400">
                 Technologies
               </p>
-
             </div>
 
           </div>
 
-
-          {/* Button */}
+          {/* BUTTON */}
 
           <div className="mt-12 flex justify-center">
-
             <button
               className="
               inline-flex
@@ -456,12 +424,11 @@ export default function DocsPage() {
               <Rocket size={18} />
               Get Started
             </button>
-
           </div>
 
         </section>
-		
-		        {/*==================================================*/}
+
+        {/*==================================================*/}
         {/* FEATURED TECHNOLOGIES */}
         {/*==================================================*/}
 
@@ -469,32 +436,16 @@ export default function DocsPage() {
 
           <div className="text-center">
 
-            <h2
-              className="
-              text-4xl
-              font-black
-              "
-            >
+            <h2 className="text-4xl font-black">
               Featured Technologies
             </h2>
 
-            <p
-              className="
-              mt-4
-              text-lg
-              text-gray-400
-              "
-            >
-              Pelajari berbagai teknologi modern
-              yang digunakan dalam pengembangan
-              aplikasi, cloud computing dan
-              deployment.
+            <p className="mt-4 text-lg text-gray-400">
+              Pelajari berbagai teknologi modern yang digunakan dalam
+              pengembangan aplikasi, cloud computing dan deployment.
             </p>
 
           </div>
-
-
-          {/* Documentation Grid */}
 
           <div
             className="
@@ -509,10 +460,8 @@ export default function DocsPage() {
             {docs.map((doc) => (
 
               <Link
-
                 key={doc.title}
                 href={doc.href}
-
                 className="
                 group
                 relative
@@ -525,7 +474,6 @@ export default function DocsPage() {
                 backdrop-blur-xl
                 transition-all
                 duration-500
-
                 hover:-translate-y-2
                 hover:border-green-500/30
                 hover:bg-white/10
@@ -533,9 +481,6 @@ export default function DocsPage() {
                 hover:shadow-green-500/10
                 "
               >
-
-
-                {/* Glow Effect */}
 
                 <div
                   className="
@@ -553,142 +498,49 @@ export default function DocsPage() {
                   "
                 />
 
-
-                {/* Technology */}
-
-                <h3
-                  className="
-                  relative
-                  text-3xl
-                  font-black
-                  "
-                >
+                <h3 className="relative text-3xl font-black">
                   {doc.title}
                 </h3>
 
-
-                <p
-                  className="
-                  mt-4
-                  text-gray-400
-                  "
-                >
+                <p className="mt-4 text-gray-400">
                   {doc.subtitle}
                 </p>
 
+                <div className="mt-10 space-y-4">
 
-                {/* Statistics */}
-
-                <div
-                  className="
-                  mt-10
-                  space-y-4
-                  "
-                >
-
-                  <div
-                    className="
-                    flex
-                    items-center
-                    justify-between
-                    rounded-xl
-                    border
-                    border-white/10
-                    bg-black/30
-                    px-4
-                    py-3
-                    "
-                  >
-                    <span>
-                      Articles
-                    </span>
+                  <div className="flex items-center justify-between rounded-xl border border-white/10 bg-black/30 px-4 py-3">
+                    <span>Articles</span>
 
                     <span className="font-semibold text-green-400">
                       {doc.articles}
                     </span>
-
                   </div>
 
-
-                  <div
-                    className="
-                    flex
-                    items-center
-                    justify-between
-                    rounded-xl
-                    border
-                    border-white/10
-                    bg-black/30
-                    px-4
-                    py-3
-                    "
-                  >
-                    <span>
-                      Tutorials
-                    </span>
+                  <div className="flex items-center justify-between rounded-xl border border-white/10 bg-black/30 px-4 py-3">
+                    <span>Tutorials</span>
 
                     <span className="font-semibold text-blue-400">
                       {doc.tutorials}
                     </span>
-
                   </div>
 
-
-
-                  <div
-                    className="
-                    flex
-                    items-center
-                    justify-between
-                    rounded-xl
-                    border
-                    border-white/10
-                    bg-black/30
-                    px-4
-                    py-3
-                    "
-                  >
-                    <span>
-                      Projects
-                    </span>
+                  <div className="flex items-center justify-between rounded-xl border border-white/10 bg-black/30 px-4 py-3">
+                    <span>Projects</span>
 
                     <span className="font-semibold text-purple-400">
                       {doc.projects}
                     </span>
-
                   </div>
 
                 </div>
 
-
-                {/* Button */}
-
-                <div
-                  className="
-                  mt-10
-                  flex
-                  items-center
-                  gap-3
-                  font-semibold
-                  text-green-400
-                  "
-                >
-
+                <div className="mt-10 flex items-center gap-3 font-semibold text-green-400">
                   Explore Documentation
 
-
                   <ArrowRight
-
                     size={18}
-
-                    className="
-                    transition-all
-                    duration-300
-                    group-hover:translate-x-2
-                    "
-
+                    className="transition-all duration-300 group-hover:translate-x-2"
                   />
-
                 </div>
 
               </Link>
@@ -699,21 +551,11 @@ export default function DocsPage() {
 
         </section>
 
-
-
         {/*==================================================*/}
         {/* DOCUMENTATION OVERVIEW */}
         {/*==================================================*/}
 
-        <section
-          className="
-          mx-auto
-          max-w-7xl
-          px-6
-          pb-24
-          lg:px-8
-          "
-        >
+        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
 
           <div
             className="
@@ -730,137 +572,53 @@ export default function DocsPage() {
 
             <div className="text-center">
 
-              <h2
-                className="
-                text-4xl
-                font-black
-                "
-              >
-                Why Sekelilingmu Docs ?
+              <h2 className="text-4xl font-black">
+                Why Sekelilingmu Docs?
               </h2>
 
-
-              <p
-                className="
-                mx-auto
-                mt-6
-                max-w-4xl
-                text-lg
-                leading-8
-                text-gray-400
-                "
-              >
-                Sekelilingmu Docs hadir sebagai
-                platform pembelajaran untuk
-                Developer Indonesia yang
-                menyediakan dokumentasi,
-                tutorial, deployment guide,
-                project collection serta
-                learning roadmap yang mudah
-                dipelajari mulai dari level
-                beginner hingga professional.
+              <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-gray-400">
+                Sekelilingmu Docs hadir sebagai platform pembelajaran untuk
+                Developer Indonesia yang menyediakan dokumentasi, tutorial,
+                deployment guide, project collection serta learning roadmap
+                yang mudah dipelajari mulai dari level beginner hingga
+                professional.
               </p>
 
             </div>
 
-
-
-            <div
-              className="
-              mt-14
-              grid
-              gap-8
-              lg:grid-cols-3
-              "
-            >
-
+            <div className="mt-14 grid gap-8 lg:grid-cols-3">
 
               <div>
-
-                <h3
-                  className="
-                  text-2xl
-                  font-bold
-                  text-green-400
-                  "
-                >
+                <h3 className="text-2xl font-bold text-green-400">
                   Learn
                 </h3>
 
-                <p
-                  className="
-                  mt-4
-                  leading-8
-                  text-gray-400
-                  "
-                >
-                  Pelajari Flutter,
-                  Laravel, Docker,
-                  Azure, Linux dan
-                  Windows Server dari
-                  dasar hingga deployment.
+                <p className="mt-4 leading-8 text-gray-400">
+                  Pelajari Flutter, Laravel, Docker, Azure, Linux dan Windows
+                  Server dari dasar hingga deployment.
                 </p>
-
               </div>
 
-
-
               <div>
-
-                <h3
-                  className="
-                  text-2xl
-                  font-bold
-                  text-blue-400
-                  "
-                >
+                <h3 className="text-2xl font-bold text-blue-400">
                   Build
                 </h3>
 
-                <p
-                  className="
-                  mt-4
-                  leading-8
-                  text-gray-400
-                  "
-                >
-                  Bangun berbagai project
-                  modern menggunakan
-                  Flutter dan Laravel
-                  lengkap dengan source code,
-                  API dan system design.
+                <p className="mt-4 leading-8 text-gray-400">
+                  Bangun berbagai project modern menggunakan Flutter dan
+                  Laravel lengkap dengan source code, API dan system design.
                 </p>
-
               </div>
 
-
-
               <div>
-
-                <h3
-                  className="
-                  text-2xl
-                  font-bold
-                  text-purple-400
-                  "
-                >
+                <h3 className="text-2xl font-bold text-purple-400">
                   Deploy
                 </h3>
 
-                <p
-                  className="
-                  mt-4
-                  leading-8
-                  text-gray-400
-                  "
-                >
-                  Pelajari deployment ke
-                  VPS, Docker, Railway,
-                  Vercel, Azure dan
-                  Cloud Platform lainnya
-                  secara lengkap.
+                <p className="mt-4 leading-8 text-gray-400">
+                  Pelajari deployment ke VPS, Docker, Railway, Vercel, Azure
+                  dan Cloud Platform lainnya secara lengkap.
                 </p>
-
               </div>
 
             </div>
@@ -868,8 +626,8 @@ export default function DocsPage() {
           </div>
 
         </section>
-		
-		        {/*==================================================*/}
+
+        {/*==================================================*/}
         {/* LEARNING ROADMAP */}
         {/*==================================================*/}
 
@@ -877,285 +635,169 @@ export default function DocsPage() {
 
           <div className="text-center">
 
-            <h2
-              className="
-              text-4xl
-              font-black
-              "
-            >
+            <h2 className="text-4xl font-black">
               Learning Roadmap
             </h2>
 
-            <p
-              className="
-              mt-4
-              text-lg
-              text-gray-400
-              "
-            >
-              Ikuti roadmap pembelajaran mulai
-              dari Mobile Development hingga
+            <p className="mt-4 text-lg text-gray-400">
+              Ikuti roadmap pembelajaran mulai dari Mobile Development hingga
               Cloud Deployment dan DevOps.
             </p>
 
           </div>
 
+          <div className="mx-auto mt-20 max-w-5xl">
 
-          <div
-            className="
-            mx-auto
-            mt-20
-            max-w-3xl
-            "
-          >
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 
-            {roadmap.map((item, index) => (
+              {roadmap.map((item) => {
 
-              <div
-                key={index}
+                const Icon = item.icon;
 
-                className="
-                relative
-                flex
-                flex-col
-                items-center
-                "
-              >
-
-                <div
-                  className="
-                  flex
-                  h-20
-                  w-20
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-green-500/30
-                  bg-gradient-to-br
-                  from-green-500/20
-                  to-transparent
-                  font-bold
-                  backdrop-blur-xl
-                  "
-                >
-
-                  {item}
-
-                </div>
-
-
-                {index !== roadmap.length - 1 && (
+                return (
 
                   <div
+                    key={item.number}
                     className="
-                    h-16
-                    w-[2px]
-                    bg-gradient-to-b
-                    from-green-500
-                    to-transparent
+                    group
+                    rounded-3xl
+                    border
+                    border-white/10
+                    bg-white/5
+                    p-6
+                    text-center
+                    backdrop-blur-xl
+                    transition-all
+                    duration-300
+                    hover:-translate-y-2
+                    hover:border-green-500/30
+                    hover:bg-white/10
                     "
-                  />
+                  >
 
-                )}
+                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-green-500/30 bg-green-500/10">
 
-              </div>
+                      <Icon
+                        size={28}
+                        className="text-green-400"
+                      />
 
-            ))}
+                    </div>
+
+                    <div className="mt-5 text-sm font-semibold text-green-400">
+                      Step {item.number}
+                    </div>
+
+                    <h3 className="mt-2 text-xl font-bold">
+                      {item.title}
+                    </h3>
+
+                  </div>
+
+                );
+
+              })}
+
+            </div>
 
           </div>
 
         </section>
-
-
-
 
         {/*==================================================*/}
         {/* DOCUMENTATION CATEGORY */}
         {/*==================================================*/}
 
-        <section
-          className="
-          mx-auto
-          max-w-7xl
-          px-6
-          pb-24
-          lg:px-8
-          "
-        >
+        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
 
           <div className="text-center">
 
-            <h2
-              className="
-              text-4xl
-              font-black
-              "
-            >
+            <h2 className="text-4xl font-black">
               Documentation Categories
             </h2>
 
-            <p
-              className="
-              mt-4
-              text-lg
-              text-gray-400
-              "
-            >
-              Semua dokumentasi telah disusun
-              berdasarkan kategori pembelajaran.
+            <p className="mt-4 text-lg text-gray-400">
+              Semua dokumentasi telah disusun berdasarkan kategori pembelajaran.
             </p>
 
           </div>
 
+          <div className="mt-16 grid gap-8 lg:grid-cols-4">
 
+            {categories.map((category) => {
 
-          <div
-            className="
-            mt-16
-            grid
-            gap-8
-            lg:grid-cols-4
-            "
-          >
+              const Icon = category.icon;
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
+              return (
 
-              <h3 className="text-2xl font-bold">
-                Beginner
-              </h3>
+                <div
+                  key={category.title}
+                  className="
+                  rounded-3xl
+                  border
+                  border-white/10
+                  bg-white/5
+                  p-8
+                  transition-all
+                  duration-300
+                  hover:-translate-y-2
+                  hover:border-green-500/30
+                  "
+                >
 
-              <ul className="mt-6 space-y-3 text-gray-400">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-500/10">
+                    <Icon
+                      size={28}
+                      className="text-green-400"
+                    />
+                  </div>
 
-                <li>• Flutter Basic</li>
-                <li>• Laravel Basic</li>
-                <li>• Git & Github</li>
-                <li>• Linux Command</li>
+                  <h3 className="text-2xl font-bold">
+                    {category.title}
+                  </h3>
 
-              </ul>
+                  <p className="mt-4 text-gray-400">
+                    {category.description}
+                  </p>
 
-            </div>
+                  <p className="mt-6 text-sm text-green-400">
+                    {category.count}
+                  </p>
 
+                </div>
 
+              );
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-
-              <h3 className="text-2xl font-bold">
-                Intermediate
-              </h3>
-
-              <ul className="mt-6 space-y-3 text-gray-400">
-
-                <li>• REST API</li>
-                <li>• Authentication</li>
-                <li>• Docker Compose</li>
-                <li>• Database Design</li>
-
-              </ul>
-
-            </div>
-
-
-
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-
-              <h3 className="text-2xl font-bold">
-                Advanced
-              </h3>
-
-              <ul className="mt-6 space-y-3 text-gray-400">
-
-                <li>• CI / CD</li>
-                <li>• VPS Deployment</li>
-                <li>• Azure VM</li>
-                <li>• DevOps</li>
-
-              </ul>
-
-            </div>
-
-
-
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-
-              <h3 className="text-2xl font-bold">
-                Professional
-              </h3>
-
-              <ul className="mt-6 space-y-3 text-gray-400">
-
-                <li>• System Design</li>
-                <li>• Microservices</li>
-                <li>• Kubernetes</li>
-                <li>• Cloud Architecture</li>
-
-              </ul>
-
-            </div>
-
+            })}
 
           </div>
 
         </section>
 
-
-
-
         {/*==================================================*/}
         {/* LATEST UPDATES */}
         {/*==================================================*/}
 
-        <section
-          className="
-          mx-auto
-          max-w-7xl
-          px-6
-          pb-24
-          lg:px-8
-          "
-        >
+        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
 
           <div className="text-center">
 
-            <h2
-              className="
-              text-4xl
-              font-black
-              "
-            >
+            <h2 className="text-4xl font-black">
               Latest Updates
             </h2>
 
-            <p
-              className="
-              mt-4
-              text-lg
-              text-gray-400
-              "
-            >
-              Dokumentasi terbaru yang telah
-              diperbarui dan dipublikasikan.
+            <p className="mt-4 text-lg text-gray-400">
+              Dokumentasi terbaru yang telah diperbarui dan dipublikasikan.
             </p>
 
           </div>
 
-
-
-          <div
-            className="
-            mt-16
-            space-y-6
-            "
-          >
+          <div className="mt-16 space-y-6">
 
             {latestUpdates.map((item) => (
 
               <div
-
                 key={item.title}
-
                 className="
                 group
                 flex
@@ -1169,46 +811,26 @@ export default function DocsPage() {
                 backdrop-blur-xl
                 transition-all
                 duration-300
-
                 hover:border-green-500/30
                 hover:bg-white/10
                 "
-
               >
 
                 <div>
 
-                  <h3
-                    className="
-                    text-xl
-                    font-semibold
-                    "
-                  >
+                  <h3 className="text-xl font-semibold">
                     {item.title}
                   </h3>
 
-                  <p
-                    className="
-                    mt-2
-                    text-gray-400
-                    "
-                  >
-                    Last Updated :
-                    {" "}
-                    {item.date}
+                  <p className="mt-2 text-gray-400">
+                    Last Updated: {item.date}
                   </p>
 
                 </div>
 
-
-
                 <ArrowRight
                   size={22}
-                  className="
-                  transition-all
-                  duration-300
-                  group-hover:translate-x-2
-                  "
+                  className="transition-all duration-300 group-hover:translate-x-2"
                 />
 
               </div>
@@ -1219,22 +841,11 @@ export default function DocsPage() {
 
         </section>
 
-
-
-
         {/*==================================================*/}
         {/* COMING SOON */}
         {/*==================================================*/}
 
-        <section
-          className="
-          mx-auto
-          max-w-7xl
-          px-6
-          pb-24
-          lg:px-8
-          "
-        >
+        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
 
           <div
             className="
@@ -1250,192 +861,118 @@ export default function DocsPage() {
             "
           >
 
-            <h2
-              className="
-              text-4xl
-              font-black
-              "
-            >
+            <h2 className="text-4xl font-black">
               Coming Soon
             </h2>
 
-
-            <p
-              className="
-              mt-6
-              text-lg
-              leading-8
-              text-gray-400
-              "
-            >
-              Teknologi dan dokumentasi baru
-              akan segera hadir untuk membantu
-              Developer Indonesia dalam belajar,
-              membangun dan melakukan deployment
-              aplikasi modern.
+            <p className="mt-6 text-lg leading-8 text-gray-400">
+              Teknologi dan dokumentasi baru akan segera hadir untuk membantu
+              Developer Indonesia dalam belajar, membangun dan melakukan
+              deployment aplikasi modern.
             </p>
 
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
 
-            <div
-              className="
-              mt-10
-              flex
-              flex-wrap
-              justify-center
-              gap-4
-              "
-            >
+              {[
+                "React Native",
+                "NextJS",
+                "Kubernetes",
+                "Terraform",
+                "Jenkins",
+                "N8N",
+              ].map((item) => (
 
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                React Native
-              </span>
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 px-5 py-3"
+                >
+                  {item}
+                </span>
 
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                NextJS
-              </span>
-
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                Kubernetes
-              </span>
-
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                Terraform
-              </span>
-
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                Jenkins
-              </span>
-
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                N8N
-              </span>
+              ))}
 
             </div>
 
           </div>
 
         </section>
-		
-		        {/*==================================================*/}
+
+        {/*==================================================*/}
         {/* DEVELOPER TOOLKIT */}
         {/*==================================================*/}
 
-        <section
-          className="
-          mx-auto
-          max-w-7xl
-          px-6
-          pb-24
-          lg:px-8
-          "
-        >
+        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
 
           <div className="text-center">
 
-            <h2
-              className="
-              text-4xl
-              font-black
-              "
-            >
+            <h2 className="text-4xl font-black">
               Developer Toolkit
             </h2>
 
-            <p
-              className="
-              mt-4
-              text-lg
-              text-gray-400
-              "
-            >
-              Berbagai resources yang akan
-              membantu Developer Indonesia
-              dalam membangun aplikasi modern.
+            <p className="mt-4 text-lg text-gray-400">
+              Berbagai resources yang akan membantu Developer Indonesia dalam
+              membangun aplikasi modern.
             </p>
 
           </div>
 
+          <div className="mt-16 grid gap-8 lg:grid-cols-4">
 
+            {[
+              {
+                title: "ERD Collection",
+                description:
+                  "Kumpulan Entity Relationship Diagram berbagai project.",
+              },
+              {
+                title: "API Collection",
+                description:
+                  "REST API Documentation dan API Collection.",
+              },
+              {
+                title: "System Design",
+                description:
+                  "Architecture Diagram, Database Design dan Flowchart.",
+              },
+              {
+                title: "Deployment Guide",
+                description:
+                  "VPS, Docker, Railway, Azure dan Cloud Deployment.",
+              },
+            ].map((item) => (
 
-          <div
-            className="
-            mt-16
-            grid
-            gap-8
-            lg:grid-cols-4
-            "
-          >
+              <div
+                key={item.title}
+                className="
+                rounded-3xl
+                border
+                border-white/10
+                bg-white/5
+                p-8
+                "
+              >
 
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-2xl font-bold">
-                ERD Collection
-              </h3>
+                <h3 className="text-2xl font-bold">
+                  {item.title}
+                </h3>
 
-              <p className="mt-4 text-gray-400">
-                Kumpulan Entity Relationship
-                Diagram berbagai project.
-              </p>
-            </div>
+                <p className="mt-4 text-gray-400">
+                  {item.description}
+                </p>
 
+              </div>
 
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-2xl font-bold">
-                API Collection
-              </h3>
-
-              <p className="mt-4 text-gray-400">
-                REST API Documentation dan
-                API Collection.
-              </p>
-            </div>
-
-
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-2xl font-bold">
-                System Design
-              </h3>
-
-              <p className="mt-4 text-gray-400">
-                Architecture Diagram,
-                Database Design dan Flowchart.
-              </p>
-            </div>
-
-
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-8">
-              <h3 className="text-2xl font-bold">
-                Deployment Guide
-              </h3>
-
-              <p className="mt-4 text-gray-400">
-                VPS, Docker, Railway,
-                Azure dan Cloud Deployment.
-              </p>
-            </div>
+            ))}
 
           </div>
 
         </section>
-
-
-
 
         {/*==================================================*/}
         {/* DOWNLOAD RESOURCES */}
         {/*==================================================*/}
 
-        <section
-          className="
-          mx-auto
-          max-w-7xl
-          px-6
-          pb-24
-          lg:px-8
-          "
-        >
+        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
 
           <div
             className="
@@ -1448,154 +985,84 @@ export default function DocsPage() {
             "
           >
 
-            <h2
-              className="
-              text-center
-              text-4xl
-              font-black
-              "
-            >
+            <h2 className="text-center text-4xl font-black">
               Download Resources
             </h2>
 
-
-            <div
-              className="
-              mt-14
-              grid
-              gap-8
-              lg:grid-cols-3
-              "
-            >
+            <div className="mt-14 grid gap-8 lg:grid-cols-3">
 
               <div>
-
                 <h3 className="text-2xl font-bold">
                   Source Code
                 </h3>
 
                 <p className="mt-4 text-gray-400">
-                  Download source code
-                  berbagai project Flutter
-                  dan Laravel.
+                  Download source code berbagai project Flutter dan Laravel.
                 </p>
-
               </div>
 
-
-
               <div>
-
                 <h3 className="text-2xl font-bold">
                   Templates
                 </h3>
 
                 <p className="mt-4 text-gray-400">
-                  ERD, Database Design,
-                  System Design dan API
-                  Documentation.
+                  ERD, Database Design, System Design dan API Documentation.
                 </p>
-
               </div>
 
-
-
               <div>
-
                 <h3 className="text-2xl font-bold">
                   Developer Assets
                 </h3>
 
                 <p className="mt-4 text-gray-400">
-                  UI Kit, Icons,
-                  Deployment Checklist
-                  dan Learning Resources.
+                  UI Kit, Icons, Deployment Checklist dan Learning Resources.
                 </p>
-
               </div>
-
 
             </div>
 
           </div>
 
         </section>
-
-
-
 
         {/*==================================================*/}
         {/* FUTURE GOALS */}
         {/*==================================================*/}
 
-        <section
-          className="
-          mx-auto
-          max-w-7xl
-          px-6
-          pb-24
-          lg:px-8
-          "
-        >
+        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
 
           <div className="text-center">
 
-            <h2
-              className="
-              text-4xl
-              font-black
-              "
-            >
+            <h2 className="text-4xl font-black">
               Future Goals
             </h2>
 
-            <p
-              className="
-              mt-6
-              text-lg
-              text-gray-400
-              "
-            >
-              Sekelilingmu Docs akan terus
-              berkembang menjadi platform
-              pembelajaran modern untuk
-              Developer Indonesia.
+            <p className="mt-6 text-lg text-gray-400">
+              Sekelilingmu Docs akan terus berkembang menjadi platform
+              pembelajaran modern untuk Developer Indonesia.
             </p>
 
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
 
-            <div
-              className="
-              mt-10
-              flex
-              flex-wrap
-              justify-center
-              gap-4
-              "
-            >
+              {[
+                "Flutter Course",
+                "Laravel Course",
+                "Infrastructure Course",
+                "DevOps Course",
+                "Open Source Project",
+                "Developer Toolkit",
+              ].map((item) => (
 
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                Flutter Course
-              </span>
+                <span
+                  key={item}
+                  className="rounded-full border border-white/10 px-5 py-3"
+                >
+                  {item}
+                </span>
 
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                Laravel Course
-              </span>
-
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                Infrastructure Course
-              </span>
-
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                DevOps Course
-              </span>
-
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                Open Source Project
-              </span>
-
-              <span className="rounded-full border border-white/10 px-5 py-3">
-                Developer Toolkit
-              </span>
+              ))}
 
             </div>
 
@@ -1603,22 +1070,11 @@ export default function DocsPage() {
 
         </section>
 
-
-
-
         {/*==================================================*/}
         {/* START LEARNING */}
         {/*==================================================*/}
 
-        <section
-          className="
-          mx-auto
-          max-w-7xl
-          px-6
-          pb-28
-          lg:px-8
-          "
-        >
+        <section className="mx-auto max-w-7xl px-6 pb-28 lg:px-8">
 
           <div
             className="
@@ -1634,32 +1090,14 @@ export default function DocsPage() {
             "
           >
 
-            <h2
-              className="
-              text-5xl
-              font-black
-              "
-            >
+            <h2 className="text-5xl font-black">
               Start Learning Today
             </h2>
 
-
-            <p
-              className="
-              mx-auto
-              mt-6
-              max-w-4xl
-              text-lg
-              leading-8
-              text-gray-400
-              "
-            >
-              Mulailah perjalanan belajar
-              Flutter, Laravel, Docker,
-              Azure, Linux dan Deployment
-              Guide bersama Sekelilingmu Docs.
+            <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-gray-400">
+              Mulailah perjalanan belajar Flutter, Laravel, Docker, Azure,
+              Linux dan Deployment Guide bersama Sekelilingmu Docs.
             </p>
-
 
             <button
               className="
@@ -1673,7 +1111,6 @@ export default function DocsPage() {
               font-semibold
               transition-all
               duration-300
-
               hover:scale-105
               "
             >
@@ -1684,19 +1121,12 @@ export default function DocsPage() {
 
         </section>
 
-
-
-
-        {/*==================================================*/}
         {/* FOOTER */}
-        {/*==================================================*/}
 
         <Footer />
 
       </div>
 
     </main>
-
   );
-
 }
