@@ -37,10 +37,33 @@ const projects = [
   },
 
   {
+    title: "Nominal POS",
+
+    description:
+      "Smart POS System untuk UMKM dan berbagai jenis bisnis. Dilengkapi fitur Point of Sales, Manajemen Produk, Barcode Scanner, Thermal Printer, Laporan Penjualan, Dashboard Analytics, Multi Payment dan Inventory Management.",
+
+    tags: [
+      "Flutter",
+      "Laravel",
+      "POS System",
+      "MySQL",
+      "Inventory",
+    ],
+
+    demoUrl:
+      "https://nominal-web-two.vercel.app/#tampilan",
+
+    githubUrl:
+      "https://github.com/sekelilingmuofficial-create",
+
+    status: "live" as const,
+  },
+
+  {
     title: "Sekelilingmu Docs",
 
     description:
-      "Developer Platform yang berisi dokumentasi Flutter, Laravel, Docker, Azure, Linux, Git & GitHub, serta showcase project dan roadmap pembelajaran teknologi.",
+      "Developer Platform yang berisi dokumentasi Flutter, Laravel, Docker, Azure, Linux, Git & GitHub, showcase project serta roadmap pembelajaran teknologi untuk Developer Indonesia.",
 
     tags: [
       "Next.js",
@@ -62,12 +85,13 @@ const projects = [
     title: "Developer Toolkit",
 
     description:
-      "Developer Toolkit untuk membantu mengelola berbagai project Flutter, Laravel, React Native, Docker, Git dan Deployment dalam satu dashboard yang modern dan efisien.",
+      "Developer Toolkit untuk membantu mengelola berbagai project Flutter, Laravel, React Native, Docker, Git serta Deployment dalam satu dashboard yang modern, cepat dan efisien.",
 
     tags: [
       "Windows",
       "Flutter",
       "Laravel",
+      "Docker",
       "Git",
       "Coming Soon",
     ],
