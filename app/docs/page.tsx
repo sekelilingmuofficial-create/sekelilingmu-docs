@@ -4,18 +4,13 @@ import {
   ArrowRight,
   ArrowUpRight,
   BookOpen,
-  Box,
-  Braces,
   CheckCircle2,
   ChevronRight,
   Cloud,
   Code2,
-  Container,
   Database,
-  FileCode2,
   GraduationCap,
-  Layers3,
-  Linux,
+  Layers,
   Network,
   Rocket,
   Search,
@@ -34,17 +29,17 @@ const quickAccess = [
   {
     title: "Laravel",
     description: "Backend Framework",
-    icon: Layers3,
+    icon: Layers,
   },
   {
     title: "API",
     description: "API Development",
-    icon: Braces,
+    icon: Code2,
   },
   {
     title: "Docker",
     description: "Containerization",
-    icon: Container,
+    icon: Database,
   },
   {
     title: "Linux",
@@ -67,7 +62,7 @@ const roadmap = [
   {
     number: "2",
     title: "Laravel",
-    icon: Layers3,
+    icon: Layers,
   },
   {
     number: "3",
@@ -77,7 +72,7 @@ const roadmap = [
   {
     number: "4",
     title: "Docker",
-    icon: Container,
+    icon: Database,
   },
   {
     number: "5",
@@ -91,7 +86,7 @@ const roadmap = [
   },
   {
     number: "7",
-    title: "Deployment",
+    title: "Deploy",
     icon: UploadCloud,
   },
   {
@@ -111,7 +106,7 @@ const categories = [
   {
     title: "Intermediate",
     description: "Pengembangan skill dan konsep lebih dalam",
-    icon: Layers3,
+    icon: Layers,
     count: "24 Guides",
   },
   {
@@ -160,7 +155,7 @@ const popularDocs = [
   {
     title: "Git & GitHub",
     description: "Version control untuk workflow developer modern.",
-    icon: GitIcon,
+    icon: Code2,
   },
   {
     title: "REST API",
@@ -179,32 +174,10 @@ const popularDocs = [
   },
 ];
 
-function GitIcon() {
-  return <GitBranchIcon />;
-}
-
-function GitBranchIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      className="h-5 w-5"
-    >
-      <circle cx="6" cy="6" r="2.5" />
-      <circle cx="18" cy="18" r="2.5" />
-      <circle cx="18" cy="6" r="2.5" />
-      <path d="M8.5 6H14a4 4 0 0 1 4 4v5.5" />
-      <path d="M6 8.5v7a4 4 0 0 0 4 4h5.5" />
-    </svg>
-  );
-}
-
 export default function DocsPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#020604] text-white">
-      {/* BACKGROUND GLOW */}
+      {/* Background */}
       <div className="pointer-events-none fixed inset-0 -z-10">
         <div className="absolute left-1/2 top-[-280px] h-[650px] w-[1000px] -translate-x-1/2 rounded-full bg-green-500/[0.06] blur-[150px]" />
 
@@ -214,9 +187,7 @@ export default function DocsPage() {
       </div>
 
       <div className="mx-auto max-w-[1600px] px-4 py-5 sm:px-6 lg:px-8">
-        {/* =====================================================
-            HERO / WELCOME
-        ====================================================== */}
+        {/* HERO */}
         <section className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-[#030706]/90 px-6 py-10 sm:px-10 lg:px-14 lg:py-14">
           <div className="pointer-events-none absolute right-[-160px] top-[-180px] h-[500px] w-[650px] rounded-full bg-green-500/[0.07] blur-[120px]" />
 
@@ -243,8 +214,8 @@ export default function DocsPage() {
                 membantu perjalanan Anda menjadi developer profesional.
               </p>
 
-              {/* SEARCH */}
-              <div className="mt-8 flex max-w-2xl items-center gap-3 rounded-xl border border-white/[0.1] bg-white/[0.035] px-4 py-3.5 transition-colors focus-within:border-[#39ff88]/50">
+              {/* Search */}
+              <div className="mt-8 flex max-w-2xl items-center gap-3 rounded-xl border border-white/[0.1] bg-white/[0.035] px-4 py-3.5">
                 <Search className="h-5 w-5 shrink-0 text-white/40" />
 
                 <input
@@ -254,44 +225,58 @@ export default function DocsPage() {
                 />
 
                 <kbd className="hidden rounded-md border border-white/[0.1] bg-white/[0.04] px-2 py-1 text-[10px] text-white/40 sm:block">
-                  ⌘ K
+                  Ctrl K
                 </kbd>
               </div>
             </div>
 
-            {/* HERO STATS */}
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2">
+            {/* Stats */}
+            <div className="grid grid-cols-2 gap-3">
               <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
                 <BookOpen className="mb-5 h-5 w-5 text-[#39ff88]" />
+
                 <p className="text-2xl font-bold text-white">100+</p>
-                <p className="mt-1 text-xs text-white/45">Documentation</p>
+
+                <p className="mt-1 text-xs text-white/45">
+                  Documentation
+                </p>
               </div>
 
               <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
                 <Code2 className="mb-5 h-5 w-5 text-[#39ff88]" />
+
                 <p className="text-2xl font-bold text-white">20+</p>
-                <p className="mt-1 text-xs text-white/45">Technologies</p>
+
+                <p className="mt-1 text-xs text-white/45">
+                  Technologies
+                </p>
               </div>
 
               <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
                 <CheckCircle2 className="mb-5 h-5 w-5 text-[#39ff88]" />
+
                 <p className="text-2xl font-bold text-white">8</p>
-                <p className="mt-1 text-xs text-white/45">Roadmap Steps</p>
+
+                <p className="mt-1 text-xs text-white/45">
+                  Roadmap Steps
+                </p>
               </div>
 
               <div className="rounded-xl border border-white/[0.08] bg-white/[0.025] p-5">
                 <Rocket className="mb-5 h-5 w-5 text-[#39ff88]" />
+
                 <p className="text-2xl font-bold text-white">∞</p>
-                <p className="mt-1 text-xs text-white/45">Possibilities</p>
+
+                <p className="mt-1 text-xs text-white/45">
+                  Possibilities
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* =====================================================
-            QUICK ACCESS
-        ====================================================== */}
-        <section className="mt-5">
+        {/* QUICK ACCESS */}
+        <section className="mt-8">
           <div className="mb-4 flex items-end justify-between">
             <div>
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#39ff88]">
@@ -303,7 +288,7 @@ export default function DocsPage() {
               </h2>
             </div>
 
-            <button className="hidden items-center gap-2 text-xs text-white/45 transition-colors hover:text-[#39ff88] sm:flex">
+            <button className="hidden items-center gap-2 text-xs text-white/45 sm:flex">
               View all
               <ArrowUpRight className="h-4 w-4" />
             </button>
@@ -316,7 +301,7 @@ export default function DocsPage() {
               return (
                 <button
                   key={item.title}
-                  className="group rounded-xl border border-white/[0.08] bg-[#030706]/80 p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#39ff88]/40 hover:bg-[#39ff88]/[0.04]"
+                  className="group rounded-xl border border-white/[0.08] bg-[#030706]/80 p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#39ff88]/40"
                 >
                   <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#0b3a20] text-[#65ff9d]">
                     <Icon className="h-5 w-5" />
@@ -337,9 +322,7 @@ export default function DocsPage() {
           </div>
         </section>
 
-        {/* =====================================================
-            LEARNING ROADMAP
-        ====================================================== */}
+        {/* ROADMAP */}
         <section className="mt-8 rounded-2xl border border-white/[0.08] bg-[#030706]/80 p-6 sm:p-8">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
@@ -379,8 +362,8 @@ export default function DocsPage() {
                       {item.number}
                     </div>
 
-                    <div className="relative z-10 flex h-[70px] w-[70px] items-center justify-center rounded-full border border-[#39ff88]/80 bg-[#07140d] shadow-[0_0_25px_rgba(57,255,136,0.12)]">
-                      <Icon className="h-7 w-7 text-[#79ffb0]" strokeWidth={1.7} />
+                    <div className="relative z-10 flex h-[70px] w-[70px] items-center justify-center rounded-full border border-[#39ff88]/80 bg-[#07140d]">
+                      <Icon className="h-7 w-7 text-[#79ffb0]" />
                     </div>
 
                     <h3 className="mt-3 text-xs font-semibold text-white">
@@ -393,11 +376,9 @@ export default function DocsPage() {
           </div>
         </section>
 
-        {/* =====================================================
-            CATEGORIES + LATEST UPDATES
-        ====================================================== */}
+        {/* CATEGORIES + UPDATES */}
         <section className="mt-5 grid gap-5 lg:grid-cols-[0.9fr_1.1fr]">
-          {/* CATEGORIES */}
+          {/* Categories */}
           <div className="rounded-2xl border border-white/[0.08] bg-[#030706]/80 p-6 sm:p-7">
             <div className="mb-6">
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#39ff88]">
@@ -416,7 +397,7 @@ export default function DocsPage() {
                 return (
                   <button
                     key={category.title}
-                    className="group flex items-center gap-4 rounded-xl border border-white/[0.08] bg-white/[0.025] p-4 text-left transition-all hover:border-[#39ff88]/40 hover:bg-[#39ff88]/[0.04]"
+                    className="group flex items-center gap-4 rounded-xl border border-white/[0.08] bg-white/[0.025] p-4 text-left transition-all hover:border-[#39ff88]/40"
                   >
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#0b3a20] text-[#65ff9d]">
                       <Icon className="h-5 w-5" />
@@ -436,14 +417,14 @@ export default function DocsPage() {
                       </p>
                     </div>
 
-                    <ChevronRight className="h-4 w-4 shrink-0 text-white/30 transition-all group-hover:translate-x-1 group-hover:text-[#39ff88]" />
+                    <ChevronRight className="h-4 w-4 shrink-0 text-white/30" />
                   </button>
                 );
               })}
             </div>
           </div>
 
-          {/* LATEST UPDATES */}
+          {/* Updates */}
           <div className="rounded-2xl border border-white/[0.08] bg-[#030706]/80 p-6 sm:p-7">
             <div className="mb-6 flex items-end justify-between">
               <div>
@@ -468,10 +449,10 @@ export default function DocsPage() {
                   key={update.title}
                   className="group flex w-full items-center gap-4 py-4 text-left first:pt-0 last:pb-0"
                 >
-                  <span className="h-2 w-2 shrink-0 rounded-full bg-[#39ff88] shadow-[0_0_10px_rgba(57,255,136,0.8)]" />
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-[#39ff88]" />
 
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm text-white/75 transition-colors group-hover:text-white">
+                    <p className="truncate text-sm text-white/75">
                       {update.title}
                     </p>
 
@@ -489,9 +470,7 @@ export default function DocsPage() {
           </div>
         </section>
 
-        {/* =====================================================
-            POPULAR DOCUMENTATION
-        ====================================================== */}
+        {/* POPULAR DOCUMENTATION */}
         <section className="mt-5 rounded-2xl border border-white/[0.08] bg-[#030706]/80 p-6 sm:p-8">
           <div className="mb-6 flex items-end justify-between">
             <div>
@@ -517,14 +496,14 @@ export default function DocsPage() {
               return (
                 <button
                   key={doc.title}
-                  className="group rounded-xl border border-white/[0.08] bg-white/[0.025] p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#39ff88]/40 hover:bg-[#39ff88]/[0.04]"
+                  className="group rounded-xl border border-white/[0.08] bg-white/[0.025] p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-[#39ff88]/40"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#0b3a20] text-[#65ff9d]">
                       <Icon className="h-5 w-5" />
                     </div>
 
-                    <ArrowUpRight className="h-4 w-4 text-white/25 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#39ff88]" />
+                    <ArrowUpRight className="h-4 w-4 text-white/25" />
                   </div>
 
                   <h3 className="mt-5 text-sm font-semibold text-white">
@@ -540,7 +519,6 @@ export default function DocsPage() {
           </div>
         </section>
 
-        {/* FOOTER SPACING */}
         <div className="h-8" />
       </div>
     </main>
