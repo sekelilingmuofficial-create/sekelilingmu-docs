@@ -1,5 +1,14 @@
 "use client";
 
+import { useState } from "react";
+
+import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
+import Footer from "@/components/Footer";
+import ProjectCard from "@/components/ProjectCard";
+
+import { FolderOpen } from "lucide-react";
+
 import {
   ArrowRight,
   ArrowUpRight,
@@ -19,6 +28,10 @@ import {
   Terminal,
   UploadCloud,
 } from "lucide-react";
+
+// ============================================================================
+// Documentation List
+// ============================================================================
 
 const quickAccess = [
   {
