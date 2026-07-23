@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
@@ -9,7 +8,6 @@ import Footer from "@/components/Footer";
 
 import {
   BookOpen,
-  ArrowRight,
   Rocket,
   FileText,
   FolderOpen,
@@ -22,12 +20,6 @@ import {
   UploadCloud,
   GraduationCap,
 } from "lucide-react";
-
-//==================================================
-// DOCUMENTATION
-//==================================================
-
-
 
 //==================================================
 // ROADMAP
@@ -117,7 +109,9 @@ export default function DocsPage() {
   return (
     <main className="relative min-h-screen overflow-hidden bg-black text-white">
 
+      {/*==================================================*/}
       {/* BACKGROUND GRID */}
+      {/*==================================================*/}
 
       <div className="absolute inset-0 -z-10 opacity-20">
         <div
@@ -130,7 +124,9 @@ export default function DocsPage() {
         />
       </div>
 
+      {/*==================================================*/}
       {/* GLOW EFFECT */}
+      {/*==================================================*/}
 
       <div
         className="
@@ -147,20 +143,26 @@ export default function DocsPage() {
         "
       />
 
+      {/*==================================================*/}
       {/* HEADER */}
+      {/*==================================================*/}
 
       <Header
         onMenuClick={() => setSidebarOpen(!sidebarOpen)}
       />
 
+      {/*==================================================*/}
       {/* SIDEBAR */}
+      {/*==================================================*/}
 
       <Sidebar
         open={sidebarOpen}
         onClose={() => setSidebarOpen(false)}
       />
 
+      {/*==================================================*/}
       {/* CONTENT */}
+      {/*==================================================*/}
 
       <div className="lg:ml-72">
 
@@ -243,7 +245,9 @@ export default function DocsPage() {
             Server, Git & GitHub serta berbagai project dan deployment guide.
           </p>
 
+          {/*==================================================*/}
           {/* STATISTICS */}
+          {/*==================================================*/}
 
           <div
             className="
@@ -256,6 +260,7 @@ export default function DocsPage() {
           >
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
+
               <FileText
                 className="mx-auto mb-4 text-green-400"
                 size={28}
@@ -268,9 +273,11 @@ export default function DocsPage() {
               <p className="mt-2 text-gray-400">
                 Articles
               </p>
+
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
+
               <BookOpen
                 className="mx-auto mb-4 text-green-400"
                 size={28}
@@ -283,9 +290,11 @@ export default function DocsPage() {
               <p className="mt-2 text-gray-400">
                 Tutorials
               </p>
+
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
+
               <FolderOpen
                 className="mx-auto mb-4 text-green-400"
                 size={28}
@@ -298,9 +307,11 @@ export default function DocsPage() {
               <p className="mt-2 text-gray-400">
                 Projects
               </p>
+
             </div>
 
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-xl">
+
               <Layers
                 className="mx-auto mb-4 text-green-400"
                 size={28}
@@ -313,13 +324,17 @@ export default function DocsPage() {
               <p className="mt-2 text-gray-400">
                 Technologies
               </p>
+
             </div>
 
           </div>
 
-          {/* BUTTON */}
+          {/*==================================================*/}
+          {/* GET STARTED BUTTON */}
+          {/*==================================================*/}
 
           <div className="mt-12 flex justify-center">
+
             <button
               className="
               inline-flex
@@ -338,12 +353,13 @@ export default function DocsPage() {
               "
             >
               <Rocket size={18} />
+
               Get Started
             </button>
+
           </div>
 
         </section>
-
 
         {/*==================================================*/}
         {/* DOCUMENTATION OVERVIEW */}
@@ -370,7 +386,16 @@ export default function DocsPage() {
                 Why Sekelilingmu Docs?
               </h2>
 
-              <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-gray-400">
+              <p
+                className="
+                mx-auto
+                mt-6
+                max-w-4xl
+                text-lg
+                leading-8
+                text-gray-400
+                "
+              >
                 Sekelilingmu Docs hadir sebagai platform pembelajaran untuk
                 Developer Indonesia yang menyediakan dokumentasi, tutorial,
                 deployment guide, project collection serta learning roadmap
@@ -383,6 +408,7 @@ export default function DocsPage() {
             <div className="mt-14 grid gap-8 lg:grid-cols-3">
 
               <div>
+
                 <h3 className="text-2xl font-bold text-green-400">
                   Learn
                 </h3>
@@ -391,9 +417,11 @@ export default function DocsPage() {
                   Pelajari Flutter, Laravel, Docker, Azure, Linux dan Windows
                   Server dari dasar hingga deployment.
                 </p>
+
               </div>
 
               <div>
+
                 <h3 className="text-2xl font-bold text-blue-400">
                   Build
                 </h3>
@@ -402,9 +430,11 @@ export default function DocsPage() {
                   Bangun berbagai project modern menggunakan Flutter dan
                   Laravel lengkap dengan source code, API dan system design.
                 </p>
+
               </div>
 
               <div>
+
                 <h3 className="text-2xl font-bold text-purple-400">
                   Deploy
                 </h3>
@@ -413,6 +443,7 @@ export default function DocsPage() {
                   Pelajari deployment ke VPS, Docker, Railway, Vercel, Azure
                   dan Cloud Platform lainnya secara lengkap.
                 </p>
+
               </div>
 
             </div>
@@ -469,7 +500,20 @@ export default function DocsPage() {
                     "
                   >
 
-                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-green-500/30 bg-green-500/10">
+                    <div
+                      className="
+                      mx-auto
+                      flex
+                      h-16
+                      w-16
+                      items-center
+                      justify-center
+                      rounded-2xl
+                      border
+                      border-green-500/30
+                      bg-green-500/10
+                      "
+                    >
 
                       <Icon
                         size={28}
@@ -499,7 +543,7 @@ export default function DocsPage() {
         </section>
 
         {/*==================================================*/}
-        {/* DOCUMENTATION CATEGORY */}
+        {/* DOCUMENTATION CATEGORIES */}
         {/*==================================================*/}
 
         <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
@@ -539,11 +583,24 @@ export default function DocsPage() {
                   "
                 >
 
-                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-green-500/10">
+                  <div
+                    className="
+                    mb-6
+                    flex
+                    h-14
+                    w-14
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    bg-green-500/10
+                    "
+                  >
+
                     <Icon
                       size={28}
                       className="text-green-400"
                     />
+
                   </div>
 
                   <h3 className="text-2xl font-bold">
@@ -563,129 +620,6 @@ export default function DocsPage() {
               );
 
             })}
-
-          </div>
-
-        </section>
-
-        {/*==================================================*/}
-        {/* LATEST UPDATES */}
-        {/*==================================================*/}
-
-        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
-
-          <div className="text-center">
-
-            <h2 className="text-4xl font-black">
-              Latest Updates
-            </h2>
-
-            <p className="mt-4 text-lg text-gray-400">
-              Dokumentasi terbaru yang telah diperbarui dan dipublikasikan.
-            </p>
-
-          </div>
-
-          <div className="mt-16 space-y-6">
-
-            {latestUpdates.map((item) => (
-
-              <div
-                key={item.title}
-                className="
-                group
-                flex
-                items-center
-                justify-between
-                rounded-3xl
-                border
-                border-white/10
-                bg-white/5
-                p-8
-                backdrop-blur-xl
-                transition-all
-                duration-300
-                hover:border-green-500/30
-                hover:bg-white/10
-                "
-              >
-
-                <div>
-
-                  <h3 className="text-xl font-semibold">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-gray-400">
-                    Last Updated: {item.date}
-                  </p>
-
-                </div>
-
-                <ArrowRight
-                  size={22}
-                  className="transition-all duration-300 group-hover:translate-x-2"
-                />
-
-              </div>
-
-            ))}
-
-          </div>
-
-        </section>
-
-        {/*==================================================*/}
-        {/* COMING SOON */}
-        {/*==================================================*/}
-
-        <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
-
-          <div
-            className="
-            rounded-[40px]
-            border
-            border-green-500/20
-            bg-gradient-to-br
-            from-green-500/10
-            to-transparent
-            p-12
-            text-center
-            backdrop-blur-xl
-            "
-          >
-
-            <h2 className="text-4xl font-black">
-              Coming Soon
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-gray-400">
-              Teknologi dan dokumentasi baru akan segera hadir untuk membantu
-              Developer Indonesia dalam belajar, membangun dan melakukan
-              deployment aplikasi modern.
-            </p>
-
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
-
-              {[
-                "React Native",
-                "NextJS",
-                "Kubernetes",
-                "Terraform",
-                "Jenkins",
-                "N8N",
-              ].map((item) => (
-
-                <span
-                  key={item}
-                  className="rounded-full border border-white/10 px-5 py-3"
-                >
-                  {item}
-                </span>
-
-              ))}
-
-            </div>
 
           </div>
 
@@ -743,6 +677,10 @@ export default function DocsPage() {
                 border-white/10
                 bg-white/5
                 p-8
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:border-green-500/30
                 "
               >
 
@@ -786,6 +724,7 @@ export default function DocsPage() {
             <div className="mt-14 grid gap-8 lg:grid-cols-3">
 
               <div>
+
                 <h3 className="text-2xl font-bold">
                   Source Code
                 </h3>
@@ -793,9 +732,11 @@ export default function DocsPage() {
                 <p className="mt-4 text-gray-400">
                   Download source code berbagai project Flutter dan Laravel.
                 </p>
+
               </div>
 
               <div>
+
                 <h3 className="text-2xl font-bold">
                   Templates
                 </h3>
@@ -803,9 +744,11 @@ export default function DocsPage() {
                 <p className="mt-4 text-gray-400">
                   ERD, Database Design, System Design dan API Documentation.
                 </p>
+
               </div>
 
               <div>
+
                 <h3 className="text-2xl font-bold">
                   Developer Assets
                 </h3>
@@ -813,6 +756,7 @@ export default function DocsPage() {
                 <p className="mt-4 text-gray-400">
                   UI Kit, Icons, Deployment Checklist dan Learning Resources.
                 </p>
+
               </div>
 
             </div>
@@ -888,7 +832,16 @@ export default function DocsPage() {
               Start Learning Today
             </h2>
 
-            <p className="mx-auto mt-6 max-w-4xl text-lg leading-8 text-gray-400">
+            <p
+              className="
+              mx-auto
+              mt-6
+              max-w-4xl
+              text-lg
+              leading-8
+              text-gray-400
+              "
+            >
               Mulailah perjalanan belajar Flutter, Laravel, Docker, Azure,
               Linux dan Deployment Guide bersama Sekelilingmu Docs.
             </p>
@@ -915,7 +868,9 @@ export default function DocsPage() {
 
         </section>
 
+        {/*==================================================*/}
         {/* FOOTER */}
+        {/*==================================================*/}
 
         <Footer />
 
