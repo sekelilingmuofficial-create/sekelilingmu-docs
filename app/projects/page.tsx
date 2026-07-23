@@ -51,7 +51,7 @@ const projects = [
     ],
 
     demoUrl:
-      "https://nominal-web-two.vercel.app/#tampilan",
+      "https://nominal-web-two.vercel.app/",
 
     githubUrl:
       "https://github.com/sekelilingmuofficial-create",
