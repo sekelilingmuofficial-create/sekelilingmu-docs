@@ -56,7 +56,7 @@ const projects = [
     githubUrl:
       "https://github.com/sekelilingmuofficial-create",
 
-    status: "Build" as const,
+    status: "in-progress" as const,
   },
 
   {
@@ -79,7 +79,7 @@ const projects = [
     githubUrl:
       "https://github.com/sekelilingmuofficial-create",
 
-    status: "Build" as const,
+    status: "in-progress" as const,
   },
 
   {
