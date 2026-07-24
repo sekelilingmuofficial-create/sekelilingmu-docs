@@ -18,7 +18,7 @@ const projects = [
     title: "Ingatanku",
 
     description:
-      "Aplikasi pelacak keuangan pribadi yang membantu pengguna mencatat pemasukan, pengeluaran, mengelola budget, melihat laporan keuangan, serta mendapatkan pengingat tagihan secara otomatis.",
+      "Aplikasi manajemen keuangan pribadi untuk mencatat pemasukan, pengeluaran, mengelola budget, melihat laporan keuangan serta mendapatkan pengingat tagihan secara otomatis.",
 
     tags: [
       "Flutter",
@@ -40,7 +40,7 @@ const projects = [
     title: "Nominal POS",
 
     description:
-      "Smart POS System untuk UMKM dan berbagai jenis bisnis. Dilengkapi fitur Point of Sales, Manajemen Produk, Barcode Scanner, Thermal Printer, Laporan Penjualan, Dashboard Analytics, Multi Payment dan Inventory Management.",
+      "Smart Point of Sales (POS) System untuk UMKM dan berbagai jenis bisnis yang dilengkapi fitur Inventory Management, Barcode Scanner, Thermal Printer, Dashboard Analytics dan Multi Payment.",
 
     tags: [
       "Flutter",
@@ -58,12 +58,12 @@ const projects = [
 
     status: "Build" as const,
   },
-  
+
   {
     title: "Presensi",
 
     description:
-      "Presensi memvalidasi setiap absen dengan foto selfie real-time dan titik GPS aktual, jadi laporan kehadiran tim Anda akurat, transparan, dan tidak bisa dititip.",
+      "Smart Attendance System berbasis GPS dan selfie verification untuk memastikan data kehadiran lebih akurat, transparan dan tidak dapat dititipkan.",
 
     tags: [
       "Flutter",
@@ -86,7 +86,7 @@ const projects = [
     title: "Sekelilingmu Docs",
 
     description:
-      "Developer Platform yang berisi dokumentasi Flutter, Laravel, Docker, Azure, Linux, Git & GitHub, showcase project serta roadmap pembelajaran teknologi untuk Developer Indonesia.",
+      "Developer Platform yang menyediakan dokumentasi teknologi, showcase project, roadmap pembelajaran serta berbagai resource untuk Developer Indonesia.",
 
     tags: [
       "Next.js",
@@ -108,7 +108,7 @@ const projects = [
     title: "Developer Toolkit",
 
     description:
-      "Developer Toolkit untuk membantu mengelola berbagai project Flutter, Laravel, React Native, Docker, Git serta Deployment dalam satu dashboard yang modern, cepat dan efisien.",
+      "Developer Toolkit untuk membantu pengelolaan project Flutter, Laravel, React Native, Docker, Git dan Deployment dalam satu dashboard yang modern, cepat dan efisien.",
 
     tags: [
       "Windows",
@@ -188,7 +188,6 @@ export default function ProjectsPage() {
       {/* Main Content */}
 
       <div className="lg:ml-72">
-
         {/* Heading */}
 
         <section className="mx-auto max-w-7xl px-6 pb-10 pt-32 lg:px-8">
@@ -219,43 +218,45 @@ export default function ProjectsPage() {
 
           <h1
             className="
-            text-4xl
-            font-bold
-            leading-tight
-            tracking-tight
-            text-white
-            sm:text-5xl
+              text-4xl
+              font-bold
+              leading-tight
+              tracking-tight
+              text-white
+              sm:text-5xl
             "
           >
             Showcase Project &
             <span
               className="
-              block
-              bg-gradient-to-r
-              from-green-400
-              to-blue-500
-              bg-clip-text
-              text-transparent
+                block
+                bg-gradient-to-r
+                from-green-400
+                to-blue-500
+                bg-clip-text
+                text-transparent
               "
             >
-              Developer Platform
+              Developer Ecosystem
             </span>
           </h1>
 
           <p
             className="
-            mt-6
-            max-w-3xl
-            text-lg
-            leading-relaxed
-            text-gray-400
+              mt-6
+              max-w-3xl
+              text-lg
+              leading-relaxed
+              text-gray-400
             "
           >
             Kumpulan aplikasi, tools,
             dokumentasi dan platform yang
-            sedang dikembangkan mulai dari
-            Flutter, Laravel, Docker,
-            DevOps hingga Developer Toolkit.
+            dikembangkan menggunakan Flutter,
+            Laravel, Next.js, Docker, DevOps
+            serta berbagai teknologi modern
+            untuk membangun solusi digital
+            yang cepat, efisien dan scalable.
           </p>
         </section>
 
@@ -264,10 +265,10 @@ export default function ProjectsPage() {
         <section className="mx-auto max-w-7xl px-6 pb-20 lg:px-8">
           <div
             className="
-            grid
-            gap-6
-            sm:grid-cols-2
-            lg:grid-cols-3
+              grid
+              gap-6
+              sm:grid-cols-2
+              lg:grid-cols-3
             "
           >
             {projects.map((project) => (
