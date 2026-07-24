@@ -56,7 +56,30 @@ const projects = [
     githubUrl:
       "https://github.com/sekelilingmuofficial-create",
 
-    status: "live" as const,
+    status: "Build" as const,
+  },
+  
+  {
+    title: "Presensi",
+
+    description:
+      "Presensi memvalidasi setiap absen dengan foto selfie real-time dan titik GPS aktual, jadi laporan kehadiran tim Anda akurat, transparan, dan tidak bisa dititip.",
+
+    tags: [
+      "Flutter",
+      "Laravel",
+      "GPS",
+      "REST API",
+      "VPS",
+    ],
+
+    demoUrl:
+      "https://presensi-web-one.vercel.app/",
+
+    githubUrl:
+      "https://github.com/sekelilingmuofficial-create",
+
+    status: "Build" as const,
   },
 
   {
