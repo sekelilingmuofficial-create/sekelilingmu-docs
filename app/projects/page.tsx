@@ -15,7 +15,7 @@ import { FolderOpen } from "lucide-react";
 
 const projects = [
   {
-    title: "Ingatanku",
+    title: "Ingatanku App",
 
     description:
       "Aplikasi manajemen keuangan pribadi untuk mencatat pemasukan, pengeluaran, mengelola budget, melihat laporan keuangan serta mendapatkan pengingat tagihan secara otomatis.",
@@ -60,7 +60,7 @@ const projects = [
   },
 
   {
-    title: "Presensi",
+    title: "Presensi App",
 
     description:
       "Smart Attendance System berbasis GPS dan selfie verification untuk memastikan data kehadiran lebih akurat, transparan dan tidak dapat dititipkan.",
