@@ -83,7 +83,7 @@ const projects = [
   },
   
   {
-    title: "Akaris App",
+    title: "Akaris HRIS",
 
     description:
       "Satu sistem Human Resources Information System yg terintegrasi untuk absensi, payroll, dan manajemen karyawan. Akurat di setiap langkah, untuk perusahaan yang terus bertumbuh.",
@@ -91,9 +91,8 @@ const projects = [
     tags: [
       "Flutter",
       "Laravel",
-      "GPS",
       "REST API",
-      "HRIS",
+      "HRIS System",
     ],
 
     demoUrl:
