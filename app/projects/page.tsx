@@ -81,6 +81,29 @@ const projects = [
 
     status: "in-progress" as const,
   },
+  
+  {
+    title: "Akaris App",
+
+    description:
+      "Satu sistem Human Resources Information System yg terintegrasi untuk absensi, payroll, dan manajemen karyawan. Akurat di setiap langkah, untuk perusahaan yang terus bertumbuh.",
+
+    tags: [
+      "Flutter",
+      "Laravel",
+      "GPS",
+      "REST API",
+      "HRIS",
+    ],
+
+    demoUrl:
+      "https://akaris-web-khaki.vercel.app/",
+
+    githubUrl:
+      "https://github.com/sekelilingmuofficial-create",
+
+    status: "in-progress" as const,
+  },
 
   {
     title: "Sekelilingmu Docs",
