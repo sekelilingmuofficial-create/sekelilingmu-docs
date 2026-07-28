@@ -35,6 +35,28 @@ const projects = [
 
     status: "live" as const,
   },
+  
+  {
+    title: "Sekelilingmu Docs",
+
+    description:
+      "Developer Platform yang menyediakan dokumentasi teknologi, showcase project, roadmap pembelajaran serta berbagai resource untuk Developer Indonesia.",
+
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+
+    demoUrl:
+      "https://sekelilingmu-docs.vercel.app",
+
+    githubUrl:
+      "https://github.com/sekelilingmuofficial-create/sekelilingmu-docs",
+
+    status: "live" as const,
+  },
 
   {
     title: "Nominal POS",
@@ -101,29 +123,29 @@ const projects = [
     githubUrl:
       "https://github.com/sekelilingmuofficial-create",
 
-    status: "in-progress" as const,
+    status: "planned" as const,
   },
-
-  {
-    title: "Sekelilingmu Docs",
+  
+    {
+    title: "TuanTroli",
 
     description:
-      "Developer Platform yang menyediakan dokumentasi teknologi, showcase project, roadmap pembelajaran serta berbagai resource untuk Developer Indonesia.",
+      "Platform e-commerce SaaS multi-tenant yang memungkinkan banyak toko online berjalan dalam satu sistem. Warna, logo, dan tema tampilan bisa disesuaikan penuh sesuai identitas brand tiap pelanggan.",
 
     tags: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Vercel",
+      "Flutter",
+      "Laravel",
+      "REST API",
+      "Multi-Tenant",
     ],
 
     demoUrl:
-      "https://sekelilingmu-docs.vercel.app",
+      "https://tuantroli-web.vercel.app/",
 
     githubUrl:
       "https://github.com/sekelilingmuofficial-create/sekelilingmu-docs",
 
-    status: "live" as const,
+    status: "planned" as const,
   },
 
   {
