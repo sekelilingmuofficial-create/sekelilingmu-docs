@@ -145,7 +145,7 @@ const projects = [
   },
   
     {
-    title: "TuanTroli",
+    title: "TuanTroli App SaaS",
 
     description:
       "Platform e-commerce SaaS multi-tenant yang memungkinkan banyak toko online berjalan dalam satu sistem. Warna, logo, dan tema tampilan bisa disesuaikan penuh sesuai identitas brand tiap pelanggan.",
