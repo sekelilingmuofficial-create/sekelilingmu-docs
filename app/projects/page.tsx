@@ -105,6 +105,24 @@ const projects = [
   },
   
   {
+    title: "Ardya Assist Smarthome",
+    description:
+      "Smart Home System berbasis IoT yang menghubungkan ESP32, Firebase Realtime Database, dan aplikasi Flutter secara real-time, dilengkapi fitur Kontrol Perangkat (lampu, AC, stop kontak), Skenario Otomatis, CCTV Live View, Kunci Pintu Jarak Jauh, dan Statistik Konsumsi Energi.",
+    tags: [
+      "Flutter",
+      "Firebase",
+      "ESP32",
+      "IoT",
+      "Realtime Database",
+    ],
+    demoUrl:
+      "https://ardya-smarthome-web.vercel.app/",
+    githubUrl:
+      "https://github.com/sekelilingmuofficial-create",
+    status: "in-progress" as const,
+  },
+  
+  {
     title: "Akaris HRIS",
 
     description:
